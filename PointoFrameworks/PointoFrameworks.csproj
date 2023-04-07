@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>Generic Clients, Status Codes and Validators Class</Title>
+    <PackageId>PointoFrameworks</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Sueda Akın</Authors>
+    <Company>Pointo</Company>
+    <Description>Generic Clients, Status Codes and Validators Class</Description>
+    <Copyright>Copyright</Copyright>
+    <PackageIcon>avatar-default-icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Desktop\avatar-default-icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
