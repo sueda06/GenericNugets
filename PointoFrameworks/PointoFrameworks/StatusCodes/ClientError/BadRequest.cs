@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StatusCodes.Base;
+using PointoFrameworks.PointoFrameworks.StatusCodes.Base;
 
-namespace StatusCodes.ClientError
+namespace PointoFrameworks.PointoFrameworks.StatusCodes.ClientError
 {
-    public class BadRequest:BaseStatus<Empty>
+    public class BadRequest : BaseStatus<Empty>
     {
         public static BaseStatus<Empty> BadRequestResponse()
         {

@@ -5,11 +5,11 @@ using System.IO;
 using System.Net.Http.Headers;
 using System.Reflection;
 
-namespace Clients
+namespace PointoFrameworks.PointoFrameworks.Clients
 {
-    public class CSVCall<T> where T : class,new() 
+    public class CSVCall<T> where T : class, new()
     {
-        public static async Task<List<T>> GetAsync(string url,char seperator,string contentType)
+        public static async Task<List<T>> GetAsync(string url, char seperator, string contentType)
         {
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(
@@ -18,12 +18,12 @@ namespace Clients
             HttpResponseMessage response = await client.GetAsync(url);
             response.EnsureSuccessStatusCode();
             var resp = await response.Content.ReadAsStringAsync();
-            List<T> list = (List<T>)CustomDeserialize(resp,seperator).ToList();
+            List<T> list = CustomDeserialize(resp, seperator).ToList();
             return list;
         }
-        protected static IEnumerable<T> CustomDeserialize(string csvString,char seperator)
+        protected static IEnumerable<T> CustomDeserialize(string csvString, char seperator)
         {
-            string[] arrayLinesCsv = csvString.Split('\r','\n');
+            string[] arrayLinesCsv = csvString.Split('\r', '\n');
             string[] columnsName = arrayLinesCsv[0].Split(seperator);
             Type tp = typeof(T);
             PropertyInfo[] props = tp.GetProperties();
@@ -38,7 +38,7 @@ namespace Clients
                         PropertyInfo prop = null;
                         for (int x = 0; x < props.Length; x++)
                         {
-                            if (columnsName[j] == props[x].Name.ToLower().Replace("ı","i"))
+                            if (columnsName[j] == props[x].Name.ToLower().Replace("ı", "i"))
                             {
                                 prop = props[x];
                             }
@@ -48,7 +48,7 @@ namespace Clients
                             }
                         }
                     }
-                    yield return (instance as T);
+                    yield return instance as T;
                 }
             }
         }

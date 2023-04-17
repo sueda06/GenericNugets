@@ -13,6 +13,11 @@
     <Copyright>Copyright</Copyright>
     <PackageIcon>avatar-default-icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/sueda06/GenericNugets</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Client Validator StatusCode</PackageTags>
+    <NeutralLanguage>tr</NeutralLanguage>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

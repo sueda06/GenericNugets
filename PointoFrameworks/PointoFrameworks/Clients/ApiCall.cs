@@ -3,12 +3,12 @@ using System;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace Clients
+namespace PointoFrameworks.PointoFrameworks.Clients
 {
-    public class ApiCall<T> where T : class 
+    public class ApiCall<T> where T : class
     {
 
-        public static async Task<List<T>> GetAsync(string url,string contentType)
+        public static async Task<List<T>> GetAsync(string url, string contentType)
         {
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(
@@ -29,7 +29,7 @@ namespace Clients
 
             var json = JsonConvert.SerializeObject(data);
             var newdata = new StringContent(json, Encoding.UTF8, contentType);
-            HttpResponseMessage response = await client.PostAsync(url,newdata);
+            HttpResponseMessage response = await client.PostAsync(url, newdata);
             response.EnsureSuccessStatusCode();
             var result = await response.Content.ReadAsStringAsync();
 

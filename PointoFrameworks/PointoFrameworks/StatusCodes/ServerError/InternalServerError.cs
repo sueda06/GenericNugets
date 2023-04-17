@@ -1,11 +1,11 @@
-﻿using StatusCodes.Base;
+﻿using PointoFrameworks.PointoFrameworks.StatusCodes.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StatusCodes.ServerError
+namespace PointoFrameworks.PointoFrameworks.StatusCodes.ServerError
 {
     public class InternalServerError : BaseStatus<Empty>
     {

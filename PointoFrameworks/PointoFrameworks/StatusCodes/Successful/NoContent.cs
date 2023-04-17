@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StatusCodes.Base;
+using PointoFrameworks.PointoFrameworks.StatusCodes.Base;
 
-namespace StatusCodes.Successful
+namespace PointoFrameworks.PointoFrameworks.StatusCodes.Successful
 {
     public class NoContent : BaseStatus<Empty>
     {

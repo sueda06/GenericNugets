@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace StatusCodes.Base
+namespace PointoFrameworks.PointoFrameworks.StatusCodes.Base
 {
     public class BaseStatus<T>
     {
